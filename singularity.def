@@ -1,0 +1,10 @@
+Bootstrap: docker
+From: python:3.9-buster
+
+%files
+    requirements.txt requirements.txt
+%post
+    apt-get update
+    apt-get install build-essential
+    apt-get -y install swig
+    pip3 install -r requirements.txt

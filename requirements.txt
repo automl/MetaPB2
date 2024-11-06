@@ -1,0 +1,23 @@
+ray[default]==2.8.1
+ray[rllib]==2.8.1
+ray[tune]==2.8.1
+torch==2.1.2
+gymnasium==0.28.1
+gym==0.26.2
+pygame==2.5.2
+carl-bench @ git+https://github.com/automl/CARL.git@e9240755bdc42b0924d1cf2db61983a555013342
+brax==0.9.3
+scikit-learn==1.3.2
+tensorflow_probability==0.23.0
+pyarrow==14.0.2
+GPy==1.13.1
+bayesian-optimization==1.4.3
+openml==0.14.1
+jinja2==3.1.2
+pydantic==1.10.14
+matplotlib==3.8.2
+seaborn==0.13.0
+protobuf==4.25.1
+autorank==1.1.3
+numpy==1.24.4
+imageio==2.33.1
