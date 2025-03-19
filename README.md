@@ -44,7 +44,7 @@ to initialize the hyperparameters. The other is in the form of previous runs whi
 ### Portfolios
 Creating portfolios is done in three steps as described in Section 4.4 of our paper. 
 
-We created a small example [configuration](configurations/examples/portfolio_example.py) which only contains 2 environments with two gravity variants to demonstrate the process. 
+We created a small example [configuration](configurations/examples/portfolio.py) which only contains 2 environments with two gravity variants to demonstrate the process. 
 The following commands can be used to generate the portfolios.
 
 The first step is to generate portfolio candidates by finding optimal hyperparameter configurations for all environments by running:
