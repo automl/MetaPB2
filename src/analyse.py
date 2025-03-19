@@ -56,7 +56,7 @@ def rl_metric_rename(results_metrics, old_metric, new_metric, nan_col=True):
     return results_metrics
 
 
-def load_results(results_path: str, dl_split: str):
+def load_results(results_path: Union[str, Path], dl_split: str):
     dir_path = str(results_path) + r'/*_result.csv'
     dataframes = []
     for file in glob.glob(dir_path):
@@ -257,7 +257,6 @@ def critical_difference(full_experiment_dataframe: pd.DataFrame, output_path: Pa
         fig, ax = plt.subplots()
         plot_stats(result, ax=ax, allow_insignificant=True)
         ax.set_title(f"Critical Difference after {n_time_steps} iterations")
-        fig.tight_layout
 
         save_path = output_path / 'critical_differences' / str(n_time_steps)
         save_path.parent.mkdir(parents=True, exist_ok=True)
@@ -274,7 +273,6 @@ def critical_difference(full_experiment_dataframe: pd.DataFrame, output_path: Pa
     fig, ax = plt.subplots()
     plot_stats(result, ax=ax)
     ax.set_title(f"Combined Critical Difference")
-    fig.tight_layout
 
     save_path = output_path / 'critical_differences' / 'combined'
     save_path.parent.mkdir(parents=True, exist_ok=True)
@@ -285,7 +283,7 @@ def critical_difference(full_experiment_dataframe: pd.DataFrame, output_path: Pa
     fig, ax = plt.subplots()
     visualize_rank_over_time(pd.DataFrame(rank_over_time), np.array(cds_over_time), ax)
     # ax.set_title('Random Search vs PB2 - Validation Split')
-    fig.tight_layout
+    fig.tight_layout()
 
     save_path = output_path / 'critical_differences' / 'rank_over_time'
     save_path.parent.mkdir(parents=True, exist_ok=True)
@@ -481,7 +479,7 @@ def critical_difference_paper(full_experiment_dataframe: pd.DataFrame, output_pa
         ax.set_xlabel("Number of iterations", fontsize=22)
         ax.xaxis.set_label_coords(.3, -0.06)
         ax.tick_params(axis='both', which='major', labelsize=16)
-        ax.set_xlim([0, 25])
+        ax.set_xlim([0, max_n_time_steps + 10])
         plt.show()
 
         if output_path is not None:

@@ -1,3 +1,7 @@
+"""
+Base code from https://github.com/huawei-noah/HEBO
+"""
+
 from typing import Optional, Callable, Tuple, Union, Dict, Any, List
 
 import matplotlib.pyplot as plt
