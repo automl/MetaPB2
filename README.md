@@ -30,7 +30,10 @@ The data containing the results of our experiments and the meta-data used by our
 After downloading the files, extract them in the root directory of this repository.
 Note that `meta_data.zip` contains the meta-data used by our methods and `results.zip` contains the results of our experiments.
 # Usage
-The experiments can be reproduced by running the configuration files in the `configurations` directory with the following command.
+The experiments can be reproduced by running the configuration files in the `configurations` directory with the command below.
+This command executes an example configuration that only takes a few minutes to train (2 min with Apple M3 Pro @ 4.06 GHz) and can be used to check the setup. 
+A single run from the experiments will approximately take an hour for classic control (Intel Xeon Gold 6242 @ 2.80GHz) and seven to eight hours for Brax (Intel Xeon E5-2630v4 @ 2.2 GHz).
+
 ```bash
 python -m src.run_experiment --moab_id 0 --config_file_name pb2 --experiment_dir configurations/examples
 ```
