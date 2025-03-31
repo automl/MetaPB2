@@ -88,7 +88,7 @@ If you use MetaPB2 in your work, please cite the following paper:
 @article{
     hog2025metalearning,
     title={Meta-learning Population-based Methods for Reinforcement Learning},
-    author={Johannes Hog and Raghu Rajan and André Biedenkapp and Noor Awad and Frank Hutter and Vu Nguyen},
+    author={Johannes Hog and Raghu Rajan and Andr{\'e} Biedenkapp and Noor Awad and Frank Hutter and Vu Nguyen},
     journal={Transactions on Machine Learning Research},
     issn={2835-8856},
     year={2025},
